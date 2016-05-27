@@ -1,6 +1,6 @@
-> Как установить мой проект
+portfolio_2
 
-1. git clone https://github.com/karaulovskin/dz1.git site
+1. git clone https://github.com/karaulovskin/portfolio_2.git site
 2. cd site
 3. bower i
 4. npm i
