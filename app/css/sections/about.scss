@@ -1,0 +1,64 @@
+.main {
+  width: 700px;
+  float: right;
+  margin-left: 20px;
+}
+
+.about__left {
+	float: left;
+	width: 300px;
+}
+
+.about__pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  margin: 24px auto;
+}
+
+.user__pic-img {
+	width: 100%;
+}
+
+.about__right {
+	float: right;
+	width: 400px;
+}
+
+.title {
+  font-size: 35px;
+  color: $grey;
+  margin: 25px 0;
+  @include fira(medium);
+}
+
+.about__desc {
+  font-size: 18px;
+  color: #646464;
+  margin: 0 0 50px 0;
+  @include fira(light);
+}
+
+.btns {
+  float: right;
+  margin: 0 0 105px 0;
+}
+
+.btn__link {
+  font: bold 14px sans-serif;
+  color: $red;
+  border: 2px solid $red;
+  border-radius: 50px;
+  padding: 10px 12px;
+}
+
+.btn--welcome {
+  padding: 28px;
+}
+
+.btn__link--welcome:hover {
+  background: #fff;
+  color: #33c1e3;
+}

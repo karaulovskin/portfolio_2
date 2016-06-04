@@ -1,0 +1,60 @@
+.header	{
+	min-width: 960px;
+	height: 79px;
+	background: #fff;
+	color: $grey;
+	@include box-shadow(0 1px 3px rgba(#000, .2));
+	@extend %clearfix;
+}
+
+.header__left, .header__right {
+	float: left;
+	width: 50%;
+}
+
+.user--header {
+	margin: 9px 0 0 0;
+}
+
+.user__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #bebebe;
+  // @include border-radius 50%;
+  overflow: hidden;
+  @include inlineblock(middle);
+}
+
+.user__avatar-img {
+	width: 100%;
+}
+
+.user__username {
+	color: $grey;
+	margin: 0 0 0 19px;
+	@include inlineblock(middle);
+}
+
+.user__username-text {
+	font-size: 18px;
+	margin: 18px 0 14px;
+	@include fira();
+}
+
+.contacts {
+	margin: 26px 0 0 0;
+	text-align: right;
+}
+
+.contacts__link {
+	font-size: 18px;
+	color: $blue;
+	background: url('/img/decor/dotted.png') 0 bottom repeat-x;
+  padding: 0 0 2px 0;
+  @include fira(bold);
+}
+
+.contacts__dropdown {
+	display: none;
+}

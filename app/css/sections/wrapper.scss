@@ -1,0 +1,13 @@
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+	min-width: 960px;
+	height: auto!important;
+	@extend %clearfix;
+}
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+}

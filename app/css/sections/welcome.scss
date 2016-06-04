@@ -1,0 +1,67 @@
+.greet {
+	width: 300px;
+	background: #fff;
+  margin: 0 auto;
+  border-radius: 8px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.3) 
+}
+
+.user--welcome {
+	margin: 0 auto;
+}
+
+.user__avatar--welcome {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #bebebe;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  margin-bottom: -80px;
+}
+
+.user__avatar-img--welcome {
+	width: 100%;
+}
+
+.user__username--welcome {
+	color: #414141;
+	width: 230px;
+	margin:0 auto;
+}
+
+.user__username-text--welcome {
+	font-size: 21px;
+	margin: 18px 0 14px;
+}
+
+.greet__btn {
+	background: #33c1e3;
+	border-radius: 0 0 8px 8px;
+}
+
+.btn--welcome {
+	padding: 28px;
+}
+
+.btn__link--welcome {
+	font-size: 14px;
+	color: #fff;
+	border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 10px 12px;
+  @include fira(bold);
+}
+
+.btn__link--welcome:hover {
+	background: #fff;
+	color: #33c1e3;
+}

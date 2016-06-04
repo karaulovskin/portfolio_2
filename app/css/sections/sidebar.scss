@@ -1,0 +1,24 @@
+.sidebar {
+	margin-top: 25px;
+	width: 220px;
+	float: left;
+}
+
+.nav__list {
+	
+}
+
+.nav__link {
+	display: block;
+	text-align: right;
+	font-size: 18px;
+	color: $grey;
+	padding: 10px 20px 10px 0;
+	border-right: 5px solid transparent;
+	@include fira(bold);
+
+	&:hover {
+		border-color: $blue;
+	}
+
+}

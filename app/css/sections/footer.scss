@@ -1,0 +1,58 @@
+.footer {
+	position: relative;
+	min-width: 960px;
+	height: 50px;
+	background: $grey;
+	color: #9c9c9c;
+	@extend %clearfix;
+	margin-top: -50px;
+}
+
+.footer__left {
+	float: left;
+}
+
+.copyright {
+	padding: 14px 0 0 0;
+	font-size: 14px;
+	@include fira(light);
+}
+
+.footer__right {
+	float: right;
+}
+
+/* Cоц.блок */
+.socials {
+	margin: 10px 0 0 0;
+	min-width: 110px;
+}
+
+.socials__item {
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	margin: 0 0 0 4px;
+}
+
+.socials__item:first-child {
+	margin: 0;
+}
+
+.socials__link {
+	display: block;
+	text-indent: -9999px;
+	height: 100%;
+	width: 100%;
+}
+
+@each $social in (fb, vk, gh) {
+	.socials__link--#{$social} {
+		background: url('/img/icons/#{$social}.png') 0 0 no-repeat;
+		
+		&:hover {
+			background: url('/img/icons/#{$social}-hover.png') 0 0 no-repeat;
+
+		}
+	}
+}
