@@ -1,8 +1,7 @@
 .header	{
 	min-width: 960px;
-	height: 79px;
+	padding: 9px 0;
 	background: #fff;
-	color: $grey;
 	@include box-shadow(0 1px 3px rgba(#000, .2));
 	@extend %clearfix;
 }
@@ -10,10 +9,6 @@
 .header__left, .header__right {
 	float: left;
 	width: 50%;
-}
-
-.user--header {
-	margin: 9px 0 0 0;
 }
 
 .user__avatar {
@@ -32,18 +27,18 @@
 
 .user__username {
 	color: $grey;
-	margin: 0 0 0 14px;
+	margin: 6px 0 0 13px;
 	@include inlineblock(middle);
 }
 
 .user__username-text {
+	color: $grey;
 	font-size: 18px;
-	margin: 18px 0 14px;
 	@include fira();
 }
 
 .contacts {
-	margin: 30px 0 0 0;
+	margin: 21px 0 0 0;
 	text-align: right;
 }
 
@@ -51,16 +46,38 @@
 	font-size: 18px;
 	color: $blue;
 	background: url('/img/decor/dotted.png') 0 bottom repeat-x;
-  padding: 0 0 2px 0;
   @include fira(bold);
 
 	&:hover {
 		color: $red;
 		background: url('/img/decor/dotted-hover.png') 0 bottom repeat-x;
-	}
 
+		.contacts__dropdown {
+			visibility:visible;
+		}
+	}
 }
 
 .contacts__dropdown {
+	position: absolute;
 	display: none;
+	float: right;
+	width: 191px;
+	background: #fff;
+	border: 1px solid #dedede;
+	border-radius: 10px;
+	text-align: left;
+}
+
+.dropdown__item {
+	padding: 8px 0;
+	border-top: 1px solid #eee;	
+}
+
+.dropdown__item:first-child{
+	border-top: none;	
+}
+
+.dropdown__link {
+	color: $grey;
 }

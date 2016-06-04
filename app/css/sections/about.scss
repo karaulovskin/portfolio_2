@@ -29,17 +29,23 @@
 .title {
   font-size: 35px;
   color: $grey;
-  margin: 34px 20px;
+  margin: 34px 20px 24px;
   @include fira(medium);
 }
 
 .about__desc {
   height: 300px;
-  font-size: 18px;
-  color: #646464;
-  margin: 0 0 40px 20px;
+  margin: 0 0 50px 20px;
   overflow: auto;
   @include fira(light);
+}
+
+.about__desc {
+  p {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    color: #646464;
+  }
 }
 
 .btns {
