@@ -1,7 +1,6 @@
 .main {
   width: 700px;
   float: right;
-  margin-left: 20px;
 }
 
 .about__left {
@@ -30,20 +29,22 @@
 .title {
   font-size: 35px;
   color: $grey;
-  margin: 25px 0;
+  margin: 34px 20px;
   @include fira(medium);
 }
 
 .about__desc {
+  height: 300px;
   font-size: 18px;
   color: #646464;
-  margin: 0 0 50px 0;
+  margin: 0 0 40px 20px;
+  overflow: auto;
   @include fira(light);
 }
 
 .btns {
   float: right;
-  margin: 0 0 105px 0;
+  margin: 0 0 165px 0;
 }
 
 .btn__link {
@@ -51,14 +52,19 @@
   color: $red;
   border: 2px solid $red;
   border-radius: 50px;
-  padding: 10px 12px;
+  padding: 10px 10px;
+
+  &:hover {
+    color: #fff;
+    background: $red;
+
+  }
 }
 
-.btn--welcome {
-  padding: 28px;
-}
-
-.btn__link--welcome:hover {
-  background: #fff;
-  color: #33c1e3;
+.btn__link--download {
+  &:before {
+    font-family: 'FontAwesome';
+    content: "\f019";
+    margin: 0 9px 0 0;
+  }
 }

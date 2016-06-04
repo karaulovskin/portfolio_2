@@ -4,21 +4,26 @@
 	float: left;
 }
 
-.nav__list {
-	
-}
-
 .nav__link {
 	display: block;
 	text-align: right;
 	font-size: 18px;
 	color: $grey;
-	padding: 10px 20px 10px 0;
+	padding: 10px 25px 10px 0;
 	border-right: 5px solid transparent;
-	@include fira(bold);
+	@include fira();
 
 	&:hover {
-		border-color: $blue;
+		color: $blue;
 	}
+}
 
+.nav__link--active {
+	border-color: $blue;
+	color: $blue;
+	@include fira(bold);
+}
+
+.nav__link .fa {
+	padding: 0 3px 0 0;
 }
