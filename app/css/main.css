@@ -426,9 +426,9 @@ th {
   font-style: normal;
 }
 
-.wrapper:after, .header:after, .footer:after {
+.wrapper:after, .content:after, .header:after, .about:after, .career:after, .footer:after {
   content: "";
-  display: block;
+  display: table;
   clear: both;
 }
 
@@ -3340,9 +3340,20 @@ h1, h2, h3, h4, h5, h6 {
   height: auto !important;
 }
 
+.wrapper:after {
+  content: "";
+  height: 50px;
+  display: block;
+}
+
 .container {
   width: 940px;
   margin: 0 auto;
+}
+
+.main {
+  width: 700px;
+  float: right;
 }
 
 .greet {
@@ -3416,7 +3427,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   min-width: 960px;
-  padding: 9px 0;
+  padding: 8px 0;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -3472,14 +3483,9 @@ h1, h2, h3, h4, h5, h6 {
   background: url("/img/decor/dotted-hover.png") 0 bottom repeat-x;
 }
 
-.contacts__link:hover .contacts__dropdown {
-  visibility: visible;
-}
-
 .contacts__dropdown {
   position: absolute;
   display: none;
-  float: right;
   width: 191px;
   background: #fff;
   border: 1px solid #dedede;
@@ -3530,11 +3536,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 3px 0 0;
 }
 
-.main {
-  width: 700px;
-  float: right;
-}
-
 .about__left {
   float: left;
   width: 300px;
@@ -3580,7 +3581,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btns {
   float: right;
-  margin: 0 0 165px 0;
+  margin: 0 0 106px 0;
 }
 
 .btn__link {
@@ -3600,6 +3601,94 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'FontAwesome';
   content: "\f019";
   margin: 0 9px 0 0;
+}
+
+.career__left {
+  float: left;
+}
+
+.career__pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  margin: 24px auto;
+}
+
+.career__pic-img {
+  width: 100%;
+}
+
+.career__right {
+  float: right;
+}
+
+.career__item {
+  text-align: right;
+  margin: 0 0 18px 0;
+}
+
+.career__item:first-child .career__block:before {
+  display: none;
+}
+
+.career__item:last-child .career__block:after {
+  display: none;
+}
+
+.career__block {
+  width: 380px;
+  background: #fff;
+  border: 2px solid #e6e6e6;
+  border-radius: 10px;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+.career__block:before, .career__block:after {
+  content: "";
+  display: block;
+  width: 1px;
+  background: #ddd;
+  position: absolute;
+  left: -30px;
+}
+
+.career__block:before {
+  top: 0;
+  bottom: 50%;
+  margin-bottom: 10px;
+}
+
+.career__block:after {
+  top: 50%;
+  bottom: -22px;
+  margin-top: 10px;
+}
+
+.career__yars {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  line-height: 30px;
+  /* задаём высоту блока */
+  margin: -15px 40px 0 0;
+  /* половина высоты line-height */
+}
+
+.career__yars:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #33c1e3;
+  border-radius: 50%;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  margin: -5px 0 0 0;
+  z-index: 1;
 }
 
 .footer {

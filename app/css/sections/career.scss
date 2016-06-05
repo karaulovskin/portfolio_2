@@ -1,0 +1,98 @@
+.career {
+	@extend %clearfix;
+}
+
+.career__left {
+	float: left;
+}
+
+.career__pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  margin: 24px auto;
+}
+
+.career__pic-img {
+	width: 100%;
+}
+
+.career__right {
+	float: right;
+}
+
+.career__item {
+	text-align: right;
+	margin: 0 0 18px 0;
+
+	&:first-child {
+		.career__block {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	&:last-child {
+		.career__block {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+
+.career__block {
+	width: 380px;
+	background: #fff;
+	border: 2px solid #e6e6e6;
+	border-radius: 10px;
+	display: inline-block;
+	position: relative;
+	text-align: left;
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		width: 1px;
+		background: #ddd;
+		position: absolute;
+		left: -30px;
+	}
+
+	&:before {
+		top: 0;
+		bottom: 50%;
+		margin-bottom: 10px;
+	}
+
+		&:after {
+		top: 50%;
+		bottom: -22px;
+		margin-top: 10px;
+	}
+}
+
+.career__yars {
+	position: absolute;
+	right: 100%;
+	top: 50%;
+	line-height: 30px; /* задаём высоту блока */
+	margin: -15px 40px 0 0; /* половина высоты line-height */
+
+	&:after {
+		content: "";
+		width: 10px;
+		height: 10px;
+		background: $blue;
+		border-radius: 50%;
+		position: absolute;
+		right: -15px;
+		top: 50%;
+		margin: -5px 0 0 0;
+		z-index: 1;
+	}
+}

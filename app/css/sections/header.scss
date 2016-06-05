@@ -1,6 +1,6 @@
 .header	{
 	min-width: 960px;
-	padding: 9px 0;
+	padding: 8px 0;
 	background: #fff;
 	@include box-shadow(0 1px 3px rgba(#000, .2));
 	@extend %clearfix;
@@ -51,17 +51,12 @@
 	&:hover {
 		color: $red;
 		background: url('/img/decor/dotted-hover.png') 0 bottom repeat-x;
-
-		.contacts__dropdown {
-			visibility:visible;
-		}
 	}
 }
 
 .contacts__dropdown {
 	position: absolute;
 	display: none;
-	float: right;
 	width: 191px;
 	background: #fff;
 	border: 1px solid #dedede;

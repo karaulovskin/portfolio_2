@@ -1,6 +1,5 @@
-.main {
-  width: 700px;
-  float: right;
+.about {
+  @extend %clearfix;
 }
 
 .about__left {
@@ -50,7 +49,7 @@
 
 .btns {
   float: right;
-  margin: 0 0 165px 0;
+  margin: 0 0 106px 0;
 }
 
 .btn__link {
