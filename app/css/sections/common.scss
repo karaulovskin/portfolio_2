@@ -20,9 +20,22 @@
 .container {
 	width: 940px;
 	margin: 0 auto;
+	@extend %clearfix;
 }
 
 .main {
   width: 700px;
   float: right;
+  padding: 9px 0 0 0;
+}
+
+.title {
+  font-size: 35px;
+  color: $grey;
+  margin: 0 0 32px 0;
+  @include fira(medium);
+}
+
+.title--about {
+  margin: 9px 0 24px 0;
 }

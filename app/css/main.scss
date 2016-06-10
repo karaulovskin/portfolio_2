@@ -13,10 +13,11 @@ $red: #e85f61;
 @import "plugins/font-awesome";
 
 // styles
-@import "sections/wrapper";
+@import "sections/common";
 @import "sections/welcome";
 @import "sections/header";
 @import "sections/sidebar";
 @import "sections/about";
 @import "sections/career";
+@import "sections/portfolio";
 @import "sections/footer";

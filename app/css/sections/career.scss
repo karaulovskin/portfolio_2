@@ -9,10 +9,9 @@
 .career__pic {
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  border-radius: 10px;
   overflow: hidden;
-  border: 5px solid #fff;
-  margin: 24px auto;
+  margin: 0 auto;
 }
 
 .career__pic-img {
@@ -21,11 +20,13 @@
 
 .career__right {
 	float: right;
+	width: 380px;
 }
 
 .career__item {
 	text-align: right;
 	margin: 0 0 18px 0;
+	font-size: 18px;
 
 	&:first-child {
 		.career__block {
@@ -46,13 +47,14 @@
 
 
 .career__block {
-	width: 380px;
+	font-size: 20px;
+	padding: 14px 20px 14px 20px;
 	background: #fff;
-	border: 2px solid #e6e6e6;
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
 	border-radius: 10px;
-	display: inline-block;
 	position: relative;
 	text-align: left;
+	color: $lightgrey;
 
 	&:before, &:after {
 		content: "";
@@ -60,7 +62,7 @@
 		width: 1px;
 		background: #ddd;
 		position: absolute;
-		left: -30px;
+		left: -23px;
 	}
 
 	&:before {
@@ -74,25 +76,60 @@
 		bottom: -22px;
 		margin-top: 10px;
 	}
+
+	&:hover {
+		background: $blue;
+		color: #fff;
+
+		.career__yars {
+				font-size: 18px;
+				color: $blue;
+		}
+
+		.career__yars {
+			&:after {
+				border: 5px solid #94e0f2;
+			}
+		}
+	}
+}
+
+.career__title {
+	margin: 0 0 3px 0;
+	@include fira(medium);
+}
+
+.career__jobs {
+	margin: 0 0 3px 0;
+	@include fira();
+}
+
+.career__date {
+	margin: 0 0 3px 0;
+	@include fira();
 }
 
 .career__yars {
 	position: absolute;
+	font-size: 14px;
 	right: 100%;
 	top: 50%;
 	line-height: 30px; /* задаём высоту блока */
-	margin: -15px 40px 0 0; /* половина высоты line-height */
+	margin: -15px 33px 0 0; /* половина высоты line-height */
+	padding: 0 5px 0 0;
+	@include fira();
 
 	&:after {
 		content: "";
 		width: 10px;
 		height: 10px;
 		background: $blue;
+		border: 5px solid $white;
 		border-radius: 50%;
 		position: absolute;
-		right: -15px;
+		right: -21px;
 		top: 50%;
-		margin: -5px 0 0 0;
+		margin: -10px 0 0 0;
 		z-index: 1;
 	}
 }

@@ -1,0 +1,51 @@
+.portfolio__list {
+	@extend %clearfix;
+  margin: 0 0 0 -3%;
+}
+
+.portfolio__item {
+	float: left;
+	width: 30%;
+	margin: 0 0 20px 3%;
+}
+
+.portfolio__link {
+	display: block;
+	box-shadow: 0 1px 5px rgba(0,0,0,.15);
+  background: #fff;
+	border-radius: 10px;
+}
+
+.portfolio__img-pic {
+	display: block;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+}
+
+.portfolio__desc {
+	padding: 20px 0 18px 20px;
+}
+
+.portfolio__sait {
+	h3 {
+		font-size: 21px;
+		color: $blue;
+		@include fira();
+	}
+}
+
+.portfolio__text {
+	p {
+		font-size: 14px;
+    margin: 0 0 7px 0;
+		color: $grey;
+		@include fira(light);
+	}
+}
+
+.portfolio__type {
+		font-size: 14px;
+    margin: 0 0 0 30px;
+		color: #aeaeae;
+		@include fira(medium);
+}

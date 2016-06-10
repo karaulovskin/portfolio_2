@@ -1,14 +1,22 @@
 .header	{
 	min-width: 960px;
-	padding: 8px 0;
+	height: 79px;
 	background: #fff;
-	@include box-shadow(0 1px 3px rgba(#000, .2));
+	margin: 0 0 25px 0;
 	@extend %clearfix;
+	@include box-shadow(0 1px 3px rgba(#000, .2));
 }
 
-.header__left, .header__right {
+.header__left {
 	float: left;
-	width: 50%;
+}
+
+.user {
+	margin: 8px 0 0 0;
+}
+
+.user__link {
+	display: block;
 }
 
 .user__avatar {
@@ -37,9 +45,23 @@
 	@include fira();
 }
 
+.header__right {
+	float: right;
+}
+
 .contacts {
-	margin: 21px 0 0 0;
-	text-align: right;
+	margin: 30px 0 0 0;
+	position: relative;
+
+	&:hover {
+		.contacts__link {
+			color: $red;
+			background: url('/img/decor/dotted-hover.png') 0 bottom repeat-x;
+		}
+		.contacts__dropdown {
+			visibility: visible;
+		}
+	}
 }
 
 .contacts__link {
@@ -47,32 +69,64 @@
 	color: $blue;
 	background: url('/img/decor/dotted.png') 0 bottom repeat-x;
   @include fira(bold);
-
-	&:hover {
-		color: $red;
-		background: url('/img/decor/dotted-hover.png') 0 bottom repeat-x;
-	}
 }
 
 .contacts__dropdown {
+	display: block;
+	visibility: hidden;
 	position: absolute;
-	display: none;
-	width: 191px;
+	top: 40px;
+	right: 0px;
 	background: #fff;
 	border: 1px solid #dedede;
 	border-radius: 10px;
 	text-align: left;
+	z-index: 1;
+
+	&:before {
+		content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 58%;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom: 14px solid #dedede;
+	}   
+
+		&:after {
+		content: "";
+		z-index: 1;
+    position: absolute;
+    bottom: 99%;
+    left: 58%;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom: 14px solid #fff;
+	}
 }
 
 .dropdown__item {
 	padding: 8px 0;
 	border-top: 1px solid #eee;	
-}
-
-.dropdown__item:first-child{
-	border-top: none;	
+	
+		&:first-child{
+		border-top: none;	
+	}
 }
 
 .dropdown__link {
 	color: $grey;
+	font-size: 18px;
+  display: block;
+	margin: 0 10px 0 48px;
+	@include fira(light);
+}
+
+@each $contact in (ml, tf, sk) {
+	.dropdown__item--#{$contact} {
+		background: url('/img/contacts/#{$contact}.png') 0 0 no-repeat;
+		background-position: 20px 12px;
+	}
 }

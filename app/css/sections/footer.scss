@@ -4,8 +4,8 @@
 	height: 50px;
 	background: $grey;
 	color: #9c9c9c;
-	@extend %clearfix;
 	margin-top: -50px;
+	@extend %clearfix;
 }
 
 .footer__left {
@@ -13,7 +13,7 @@
 }
 
 .copyright {
-	padding: 14px 0 0 0;
+	margin: 14px 0 0 0;
 	font-size: 14px;
 	@include fira(light);
 }
@@ -22,7 +22,6 @@
 	float: right;
 }
 
-/* Cоц.блок */
 .socials {
 	margin: 10px 0 0 0;
 	min-width: 110px;
