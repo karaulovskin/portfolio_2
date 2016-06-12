@@ -4,16 +4,25 @@
 
 .about__left {
 	float: left;
-	width: 300px;
+	width: rem(300px);
+
+  @include laptop {
+    width: rem(200px);
+  }
 }
 
 .about__pic {
-  width: 220px;
-  height: 220px;
+  width: rem(220px);
+  height: rem(220px);
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
   margin: 0 auto;
+
+  @include laptop {
+    width: rem(180px);
+    height: rem(180px);
+  }
 }
 
 .user__pic-img {
@@ -22,34 +31,38 @@
 
 .about__right {
 	float: right;
-	width: 400px;
+	width: rem(400px);
+
+  @include laptop {
+    width: rem(330px);
+  }
 }
 
 .about__content {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 rem(20px);
 }
 
 .about__desc {
-  height: 300px;
-  margin: 0 0 43px 0;
+  height: rem(300px);
+  margin: 0 0 rem(43px) 0;
   overflow: auto;
   @include fira(light);
 }
 
 .about__desc {
   p {
-    font-size: 18px;
-    margin: 0 0 15px 0;
+    font-size: rem(18px);
+    margin: 0 0 rem(15px) 0;
     color: #646464;
   }
 }
 
 .btns {
   float: right;
-  margin: 0 0 106px 0;
+  margin: 0 0 rem(106px) 0;
   border: 2px solid $red;
   border-radius: 50px;
-  padding: 6px 16px;
+  padding: rem(6px) rem(16px);
 
   &:hover {
     color: #fff;
@@ -62,7 +75,7 @@
 }
 
 .btn__link {
-  font-size: 14px;
+  font-size: rem(14px);
   color: $red;
   @include fira(bold);
 }
@@ -71,6 +84,6 @@
   &:before {
     font-family: 'FontAwesome';
     content: "\f019";
-    margin: 0 9px 0 0;
+    margin: 0 rem(9px) 0 0;
   }
 }

@@ -1,15 +1,28 @@
 .sidebar {
-	width: 220px;
+	width: rem(220px);
 	float: left;
+
+	@include tablets {
+		width: 100%;
+		float: none;
+		margin: 0 0 rem(35px) 0;
+	}
+}
+
+.nav__item {
+	@include tablets {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 
 .nav__link {
 	display: block;
 	text-align: right;
-	font-size: 18px;
+	font-size: rem(18px);
 	color: $grey;
-	padding: 10px 25px 10px 0;
-	border-right: 5px solid transparent;
+	padding: rem(10px) rem(25px) rem(10px) 0;
+	border-right: rem(5px) solid transparent;
 	@include fira();
 
 	&:hover {
@@ -21,8 +34,12 @@
 	border-color: $blue;
 	color: $blue;
 	@include fira(bold);
+
+	@include tablets {
+		border: 0;
+	}
 }
 
 .nav__link .fa {
-	margin: 0 3px 0 0;
+	margin: 0 rem(3px) 0 0;
 }

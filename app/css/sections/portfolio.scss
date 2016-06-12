@@ -1,12 +1,17 @@
 .portfolio__list {
-	@extend %clearfix;
   margin: 0 0 0 -3%;
+  // @extend %clearfix;
+  font-size: 0;
 }
 
 .portfolio__item {
-	float: left;
 	width: 30%;
 	margin: 0 0 20px 3%;
+	@include inlineblock();
+
+	* {
+		font-size: 14px;
+	}
 }
 
 .portfolio__link {
@@ -14,6 +19,14 @@
 	box-shadow: 0 1px 5px rgba(0,0,0,.15);
   background: #fff;
 	border-radius: 10px;
+
+	&:hover {
+		.portfolio__sait {
+			h3{
+				color: $red;
+			}
+		}
+	}
 }
 
 .portfolio__img-pic {
@@ -45,7 +58,11 @@
 
 .portfolio__type {
 		font-size: 14px;
-    margin: 0 0 0 30px;
 		color: #aeaeae;
 		@include fira(medium);
+}
+
+.portfolio__type_icon {
+  margin: 0 3px 0 0;
+  font-size: 18px;
 }

@@ -1,10 +1,10 @@
 .footer {
 	position: relative;
-	min-width: 960px;
-	height: 50px;
+	// min-width: 960px;
+	height: rem(50px);
 	background: $grey;
 	color: #9c9c9c;
-	margin-top: -50px;
+	margin-top: rem(-50px);
 	@extend %clearfix;
 }
 
@@ -13,8 +13,8 @@
 }
 
 .copyright {
-	margin: 14px 0 0 0;
-	font-size: 14px;
+	margin: rem(14px) 0 0 0;
+	font-size: rem(14px);
 	@include fira(light);
 }
 
@@ -28,7 +28,7 @@
 }
 
 .socials__item {
-	display: inline-block;
+	@include inlineblock(middle);
 	height: 32px;
 	width: 32px;
 	margin: 0 0 0 2px;

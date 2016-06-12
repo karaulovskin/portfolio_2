@@ -7,9 +7,9 @@
 }
 
 .career__pic {
-  width: 220px;
-  height: 220px;
-  border-radius: 10px;
+  width: rem(220px);
+  height: rem(220px);
+  border-radius: rem(10px);
   overflow: hidden;
   margin: 0 auto;
 }
@@ -20,13 +20,14 @@
 
 .career__right {
 	float: right;
-	width: 380px;
+	width: rem(380px);
 }
 
 .career__item {
 	text-align: right;
-	margin: 0 0 18px 0;
-	font-size: 18px;
+	margin: 0 0 rem(18px) 0;
+	font-size: rem(18px);
+	cursor: pointer;
 
 	&:first-child {
 		.career__block {
@@ -47,8 +48,8 @@
 
 
 .career__block {
-	font-size: 20px;
-	padding: 14px 20px 14px 20px;
+	font-size: rem(20px);
+	padding: rem(14px) rem(20px) rem(14px) rem(20px);
 	background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,.15);
 	border-radius: 10px;
@@ -59,22 +60,22 @@
 	&:before, &:after {
 		content: "";
 		display: block;
-		width: 1px;
+		width: rem(1px);
 		background: #ddd;
 		position: absolute;
-		left: -23px;
+		left: rem(-23px);
 	}
 
 	&:before {
 		top: 0;
 		bottom: 50%;
-		margin-bottom: 10px;
+		margin-bottom: rem(10px);
 	}
 
 		&:after {
 		top: 50%;
-		bottom: -22px;
-		margin-top: 10px;
+		bottom: rem(-22px);
+		margin-top: rem(10px);
 	}
 
 	&:hover {
@@ -82,7 +83,7 @@
 		color: #fff;
 
 		.career__yars {
-				font-size: 18px;
+				font-size: rem(18px);
 				color: $blue;
 		}
 
@@ -95,41 +96,41 @@
 }
 
 .career__title {
-	margin: 0 0 3px 0;
+	margin: 0 0 rem(3px) 0;
 	@include fira(medium);
 }
 
 .career__jobs {
-	margin: 0 0 3px 0;
+	margin: 0 0 rem(3px) 0;
 	@include fira();
 }
 
 .career__date {
-	margin: 0 0 3px 0;
+	margin: 0 0 rem(3px) 0;
 	@include fira();
 }
 
 .career__yars {
 	position: absolute;
-	font-size: 14px;
+	font-size: rem(14px);
 	right: 100%;
 	top: 50%;
-	line-height: 30px; /* задаём высоту блока */
-	margin: -15px 33px 0 0; /* половина высоты line-height */
-	padding: 0 5px 0 0;
+	line-height: rem(30px); /* задаём высоту блока */
+	margin: rem(-15px) rem(33px) 0 0; /* половина высоты line-height */
+	padding: 0 rem(5px) 0 0;
 	@include fira();
 
 	&:after {
 		content: "";
-		width: 10px;
-		height: 10px;
+		width: rem(10px);
+		height: rem(10px);
 		background: $blue;
 		border: 5px solid $white;
 		border-radius: 50%;
 		position: absolute;
-		right: -21px;
+		right: rem(-21px);
 		top: 50%;
-		margin: -10px 0 0 0;
+		margin: rem(-10px) 0 0 0;
 		z-index: 1;
 	}
 }
