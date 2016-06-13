@@ -12,6 +12,11 @@
   border-radius: rem(10px);
   overflow: hidden;
   margin: 0 auto;
+
+  @include laptop {
+    width: rem(150px);
+    height: rem(150px);
+  }
 }
 
 .career__pic-img {
@@ -21,6 +26,10 @@
 .career__right {
 	float: right;
 	width: rem(380px);
+
+  @include laptop {
+    width: rem(310px);
+  }
 }
 
 .career__item {
@@ -101,12 +110,22 @@
 }
 
 .career__jobs {
-	margin: 0 0 rem(3px) 0;
+	font-size: rem(18px);
+	// margin: 0 0 rem(3px) 0;
 	@include fira();
+
+  @include laptop {
+    font-size: rem(18px); 
+  }
+
+  @include tablets {
+    font-size: rem(18px); 
+  }
 }
 
 .career__date {
-	margin: 0 0 rem(3px) 0;
+	font-size: rem(18px);
+	// margin: 0 0 rem(3px) 0;
 	@include fira();
 }
 

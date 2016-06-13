@@ -438,6 +438,30 @@ body, html {
   font: 16px/24px Open Sans, sans-serif;
 }
 
+@media screen and (max-width: 1200px) {
+  body, html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body, html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body, html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body, html {
+    font-size: 13px;
+  }
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   background: #f6f6f6;
@@ -3351,8 +3375,7 @@ p {
 
 .container {
   margin: 0 auto;
-  max-width: 1000px;
-  /* ad */
+  max-width: 62.5rem;
 }
 
 .main {
@@ -3369,6 +3392,19 @@ p {
 
 @media screen and (max-width: 768px) {
   .main {
+    width: 100%;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main--portfolio {
+    width: 34.375rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main--portfolio {
     width: 100%;
     float: none;
   }
@@ -3576,7 +3612,7 @@ p {
   color: #414141;
   font-size: 1.125rem;
   display: block;
-  margin: 0 0.625rem 0 3rem;
+  padding: 0 0.625rem 0 3rem;
   font-family: 'fira_sanslight';
 }
 
@@ -3604,7 +3640,7 @@ p {
   .sidebar {
     width: 100%;
     float: none;
-    margin: 0 0 2.1875rem 0;
+    margin: 0 0 1.375rem 0;
   }
 }
 
@@ -3745,6 +3781,13 @@ p {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 992px) {
+  .career__pic {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+}
+
 .career__pic-img {
   width: 100%;
 }
@@ -3752,6 +3795,12 @@ p {
 .career__right {
   float: right;
   width: 23.75rem;
+}
+
+@media screen and (max-width: 992px) {
+  .career__right {
+    width: 19.375rem;
+  }
 }
 
 .career__item {
@@ -3821,12 +3870,24 @@ p {
 }
 
 .career__jobs {
-  margin: 0 0 0.1875rem 0;
+  font-size: 1.125rem;
   font-family: 'fira_sansregular';
 }
 
+@media screen and (max-width: 992px) {
+  .career__jobs {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .career__jobs {
+    font-size: 1.125rem;
+  }
+}
+
 .career__date {
-  margin: 0 0 0.1875rem 0;
+  font-size: 1.125rem;
   font-family: 'fira_sansregular';
 }
 
@@ -3858,19 +3919,33 @@ p {
 }
 
 .portfolio__list {
-  margin: 0 0 0 -3%;
+  margin: 0 0 0 -1.25rem;
   font-size: 0;
 }
 
 .portfolio__item {
-  width: 30%;
-  margin: 0 0 20px 3%;
+  width: 13.75rem;
+  margin: 0 0 1.25rem 1.25rem;
   display: inline-block;
   vertical-align: top;
 }
 
 .portfolio__item * {
-  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 992px) {
+  .portfolio__item {
+    width: 10.625rem;
+    margin: 0 0 1.25rem 1.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__item {
+    width: 10.5625rem;
+    margin: 0 0 1.25rem 1.25rem;
+  }
 }
 
 .portfolio__link {
@@ -3891,31 +3966,67 @@ p {
 }
 
 .portfolio__desc {
-  padding: 20px 0 18px 20px;
+  padding: 1.25rem 0 1.125rem 1.25rem;
+}
+
+@media screen and (max-width: 992px) {
+  .portfolio__desc {
+    padding: 0.875rem 0 0.875rem 0.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__desc {
+    padding: 0.875rem 0 0.875rem 0.875rem;
+  }
 }
 
 .portfolio__sait h3 {
-  font-size: 21px;
+  font-size: 1.3125rem;
   color: #33c1e3;
   font-family: 'fira_sansregular';
 }
 
 .portfolio__text p {
-  font-size: 14px;
-  margin: 0 0 7px 0;
+  font-size: 0.875rem;
+  margin: 0 0 0.4375rem 0;
   color: #414141;
   font-family: 'fira_sanslight';
 }
 
 .portfolio__type {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #aeaeae;
   font-family: 'fira_sansmedium';
 }
 
+@media screen and (max-width: 992px) {
+  .portfolio__type {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__type {
+    font-size: 0.75rem;
+  }
+}
+
 .portfolio__type_icon {
-  margin: 0 3px 0 0;
-  font-size: 18px;
+  margin: 0 0.1875rem 0 0;
+  font-size: 1.125rem;
+}
+
+@media screen and (max-width: 992px) {
+  .portfolio__type_icon {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__type_icon {
+    font-size: 0.75rem;
+  }
 }
 
 .footer {
@@ -3989,36 +4100,24 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
-  html {
-    font-size: 16px;
-  }
   .container {
     width: 970px;
   }
 }
 
 @media screen and (max-width: 992px) {
-  html {
-    font-size: 15px;
-  }
   .container {
     width: 750px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
   .container {
     width: 480px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  html {
-    font-size: 12px;
-  }
   .container {
     width: auto;
   }

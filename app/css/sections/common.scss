@@ -2,7 +2,6 @@
 	overflow: hidden;
 	position: relative;
 	min-height: 100%;
-	// min-width: 960px; delete
 	height: auto!important;
 	@extend %clearfix;
 }
@@ -18,10 +17,9 @@
 }
 
 .container {
-	// width: 940px; delete
 	margin: 0 auto;
 	@extend %clearfix;
-	max-width: 1000px; /* ad */
+	max-width: rem(1000px);
 }
 
 .main {
@@ -29,6 +27,17 @@
   float: right;
   padding: rem(9px) 0 0 0;
 
+	@include laptop {
+		width: rem(550px);
+	}
+
+	@include tablets {
+		width: 100%;
+		float: none;
+	}
+}
+
+.main--portfolio {
 	@include laptop {
 		width: rem(550px);
 	}

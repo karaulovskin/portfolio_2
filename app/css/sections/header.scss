@@ -1,5 +1,4 @@
 .header	{
-	// min-width: 960px;
 	height: rem(80px);
 	background: #fff;
 	margin: 0 0 rem(25px) 0;
@@ -111,7 +110,7 @@
 	padding: rem(8px) 0;
 	border-top: 1px solid #eee;	
 	
-		&:first-child{
+	&:first-child{
 		border-top: none;	
 	}
 }
@@ -120,8 +119,9 @@
 	color: $grey;
 	font-size: rem(18px);
   display: block;
-	margin: 0 rem(10px) 0 rem(48px);
+	padding: 0 rem(10px) 0 rem(48px);
 	@include fira(light);
+
 }
 
 @each $contact in (ml, tf, sk) {

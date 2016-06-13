@@ -1,16 +1,25 @@
 .portfolio__list {
-  margin: 0 0 0 -3%;
-  // @extend %clearfix;
+  margin: 0 0 0 rem(-20px);
   font-size: 0;
 }
 
 .portfolio__item {
-	width: 30%;
-	margin: 0 0 20px 3%;
+	width: rem(220px);
+	margin: 0 0 rem(20px) rem(20px);
 	@include inlineblock();
 
 	* {
-		font-size: 14px;
+		font-size: rem(14px);
+	}
+
+	@include laptop {
+		width: rem(170px);
+		margin: 0 0 rem(20px) rem(20px);
+	}
+
+	@include tablets {
+		width: rem(169px);
+		margin: 0 0 rem(20px) rem(20px);
 	}
 }
 
@@ -36,12 +45,20 @@
 }
 
 .portfolio__desc {
-	padding: 20px 0 18px 20px;
+	padding: rem(20px) 0 rem(18px) rem(20px);
+
+	@include laptop {
+		padding: rem(14px) 0 rem(14px) rem(14px);
+	}
+
+	@include tablets {
+		padding: rem(14px) 0 rem(14px) rem(14px);
+	}
 }
 
 .portfolio__sait {
 	h3 {
-		font-size: 21px;
+		font-size: rem(21px);
 		color: $blue;
 		@include fira();
 	}
@@ -49,20 +66,36 @@
 
 .portfolio__text {
 	p {
-		font-size: 14px;
-    margin: 0 0 7px 0;
+		font-size: rem(14px);
+    margin: 0 0 rem(7px) 0;
 		color: $grey;
 		@include fira(light);
 	}
 }
 
 .portfolio__type {
-		font-size: 14px;
-		color: #aeaeae;
-		@include fira(medium);
+	font-size: rem(14px);
+	color: #aeaeae;
+	@include fira(medium);
+
+	@include laptop {
+		font-size: rem(12px);
+	}
+
+	@include tablets {
+		font-size: rem(12px);
+	}
 }
 
 .portfolio__type_icon {
-  margin: 0 3px 0 0;
-  font-size: 18px;
+  margin: 0 rem(3px) 0 0;
+  font-size: rem(18px);
+
+	@include laptop {
+		font-size: rem(14px);
+	}
+
+	@include tablets {
+		font-size: rem(12px);
+	}
 }
