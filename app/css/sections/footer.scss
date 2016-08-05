@@ -6,32 +6,57 @@
 	color: #9c9c9c;
 	margin-top: rem(-50px);
 	@extend %clearfix;
+
+	@include phones {
+    	height: rem(114px);
+    	padding: rem(15px) rem(5px);
+	}
 }
 
 .footer__left {
 	float: left;
+
+	@include phones {
+    	float: none;
+    	margin: 0 auto;
+	}
 }
 
 .copyright {
 	margin: rem(14px) 0 0 0;
 	font-size: rem(14px);
 	@include fira(light);
+
+	@include phones {
+    	width: rem(300px);
+    	text-align: center; 
+    	margin: 0 auto rem(10px);
+	}
 }
 
 .footer__right {
 	float: right;
+
+	@include phones {
+    	float: none;
+    	margin: 0 auto;
+	}
 }
 
 .socials {
 	margin: 10px 0 0 0;
 	min-width: 110px;
+
+	@include phones {
+    	text-align: center;
+	}
 }
 
 .socials__item {
-	@include inlineblock(middle);
 	height: 32px;
 	width: 32px;
 	margin: 0 0 0 2px;
+	@include inlineblock(middle);
 }
 
 .socials__item:first-child {

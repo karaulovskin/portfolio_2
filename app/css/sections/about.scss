@@ -9,19 +9,29 @@
   @include laptop {
     width: rem(200px);
   }
+
+  @include phones {
+    float: none;
+    margin: 0 auto rem(20px);
+  }
 }
 
 .about__pic {
   width: rem(220px);
   height: rem(220px);
-  border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
   margin: 0 auto;
+  @include border-radius(50%);
 
   @include laptop {
-    width: rem(180px);
-    height: rem(180px);
+    width: rem(160px);
+    height: rem(160px);
+  }
+
+  @include phones {
+    width: rem(150px);
+    height: rem(150px);
   }
 }
 
@@ -32,14 +42,33 @@
 .about__right {
 	float: right;
 	width: rem(400px);
+  padding: rem(9px) 0 0 0;
 
   @include laptop {
-    width: rem(330px);
+    width: rem(320px);
+  }
+
+  @include tablets {
+    width: rem(300px);
+  }
+
+  @include phones {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
 .about__content {
   padding: 0 0 0 rem(20px);
+
+  @include tablets {
+    padding: 0 0 0 rem(10px);
+  }
+
+  @include phones {
+    padding: 0;
+  }
 }
 
 .about__desc {
@@ -47,6 +76,13 @@
   margin: 0 0 rem(43px) 0;
   overflow: auto;
   @include fira(light);
+
+  @include phones {
+    height: auto;
+    font-size: rem(16px);
+    margin: 0 0 rem(20px) 0;
+    overflow: visible;
+  }
 }
 
 .about__desc {
@@ -54,6 +90,10 @@
     font-size: rem(18px);
     margin: 0 0 rem(15px) 0;
     color: #646464;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 
@@ -61,8 +101,8 @@
   float: right;
   margin: 0 0 rem(106px) 0;
   border: 2px solid $red;
-  border-radius: 50px;
   padding: rem(6px) rem(16px);
+  @include border-radius(50px);
 
   &:hover {
     color: #fff;
@@ -71,6 +111,13 @@
     .btn__link {
       color: #fff;
     }
+  }
+
+  @include phones {
+    float: none;
+    width: rem(130px);
+    text-align: center; 
+    margin: 0 auto rem(30px);
   }
 }
 

@@ -7,6 +7,12 @@
 		float: none;
 		margin: 0 0 rem(22px) 0;
 	}
+
+	@include phones {
+		width: 100%;
+		float: none;
+		margin: 0 0 rem(10px) 0;
+	}
 }
 
 .nav__item {
@@ -25,6 +31,11 @@
 	border-right: rem(5px) solid transparent;
 	@include fira();
 
+	@include phones {
+		padding: rem(10px) rem(10px) rem(10px) 0;
+	}
+
+
 	&:hover {
 		color: $blue;
 	}
@@ -42,4 +53,8 @@
 
 .nav__link .fa {
 	margin: 0 rem(3px) 0 0;
+
+	@include phones {
+		display: none;
+	}
 }

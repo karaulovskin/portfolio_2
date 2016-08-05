@@ -1,6 +1,14 @@
 .portfolio__list {
-  margin: 0 0 0 rem(-20px);
-  font-size: 0;
+	margin: 0 0 0 rem(-20px);
+	font-size: 0;
+
+  	@include tablets {
+		margin: 0 0 0 rem(-16px);
+	}
+
+	@include phones {
+		margin: 0 auto;
+	}
 }
 
 .portfolio__item {
@@ -18,18 +26,25 @@
 	}
 
 	@include tablets {
-		width: rem(169px);
+		width: rem(238px);
 		margin: 0 0 rem(20px) rem(20px);
+	}
+
+	@include phones {
+		display: block;
+		width: rem(300px);
+		margin: 0 auto rem(20px);
 	}
 }
 
 .portfolio__link {
 	display: block;
-	box-shadow: 0 1px 5px rgba(0,0,0,.15);
-  background: #fff;
-	border-radius: 10px;
+	background: #fff;
+	@include border-radius(10px);
+	@include box-shadow(0 1px 3px rgba(#000, .2));
 
 	&:hover {
+		@include box-shadow(0 4px 8px rgba(#000, .2));
 		.portfolio__sait {
 			h3{
 				color: $red;
@@ -41,7 +56,7 @@
 .portfolio__img-pic {
 	display: block;
 	width: 100%;
-	border-radius: 10px 10px 0 0;
+	@include border-radius(10px 10px 0 0);
 }
 
 .portfolio__desc {
@@ -54,6 +69,10 @@
 	@include tablets {
 		padding: rem(14px) 0 rem(14px) rem(14px);
 	}
+
+	@include phones {
+		padding: rem(20px) 0 rem(18px) rem(20px);
+	}
 }
 
 .portfolio__sait {
@@ -61,15 +80,23 @@
 		font-size: rem(21px);
 		color: $blue;
 		@include fira();
+
+		@include phones {
+			font-size: rem(24px);
+		}
 	}
 }
 
 .portfolio__text {
 	p {
 		font-size: rem(14px);
-    margin: 0 0 rem(7px) 0;
+    	margin: 0 0 rem(7px) 0;
 		color: $grey;
 		@include fira(light);
+
+		@include phones {
+			font-size: rem(16px);
+		}
 	}
 }
 
@@ -83,7 +110,11 @@
 	}
 
 	@include tablets {
-		font-size: rem(12px);
+		font-size: rem(14px);
+	}
+
+	@include phones {
+		font-size: rem(16px);
 	}
 }
 
@@ -96,6 +127,10 @@
 	}
 
 	@include tablets {
-		font-size: rem(12px);
+		font-size: rem(14px);
+	}
+
+	@include phones {
+		font-size: rem(18px);
 	}
 }

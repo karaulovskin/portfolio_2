@@ -4,11 +4,17 @@
 	-moz-box-shadow: $shadow;
 }
 
-// @mixin border-radius($fifty) {
-// 	border-radius: $fifty;
-// 	-webkit-border-radius: $fifty;
-// 	-moz-border-radius: $fifty;
-// }
+@mixin border-radius($fifty) {
+	border-radius: $fifty;
+	-webkit-border-radius: $fifty;
+	-moz-border-radius: $fifty;
+}
+
+@mixin transform($translate) {
+	-webkit-transform: ($translate);
+	-ms-transform: ($translate);
+	transform: ($translate);
+}
 
 %clearfix {
 	&:after {
@@ -23,7 +29,7 @@
 	vertical-align: $valign;
 }
 
-// responsive
+/*---------- responsive ----------*/
 @function rem($px) {
 	@return $px / 16px + 0rem;
 }

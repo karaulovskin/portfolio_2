@@ -20,12 +20,13 @@
 	margin: 0 auto;
 	@extend %clearfix;
 	max-width: rem(1000px);
+	padding: 0 10px;
 }
 
 .main {
-  width: rem(700px);
-  float: right;
-  padding: rem(9px) 0 0 0;
+	width: rem(700px);
+	float: right;
+	// padding: rem(9px) 0 0 0;
 
 	@include laptop {
 		width: rem(550px);
@@ -35,26 +36,36 @@
 		width: 100%;
 		float: none;
 	}
-}
 
-.main--portfolio {
-	@include laptop {
-		width: rem(550px);
-	}
-
-	@include tablets {
+	@include phones {
 		width: 100%;
 		float: none;
 	}
 }
+
+// .main--portfolio {
+// 	@include laptop {
+// 		width: rem(550px);
+// 	}
+
+// 	@include tablets {
+// 		width: 100%;
+// 		float: none;
+// 	}
+// }
 
 .title {
-  font-size: rem(35px);
-  color: $grey;
-  margin: 0 0 rem(32px) 0;
-  @include fira(medium);
+	font-size: rem(35px);
+	color: $grey;
+	margin: 0 0 rem(32px) 0;
+	@include fira(medium);
+
+    @include phones {
+    	text-align: center;
+    	margin: 0 0 rem(20px) 0;
+	}
 }
 
 .title--about {
-  margin: rem(9px) 0 rem(24px) 0;
+	margin: rem(9px) 0 rem(24px) 0;
 }

@@ -1,9 +1,13 @@
 .header	{
 	height: rem(80px);
-	background: #fff;
 	margin: 0 0 rem(25px) 0;
+	background: #fff;
 	@extend %clearfix;
 	@include box-shadow(0 1px 3px rgba(#000, .2));
+
+	@include phones {
+		margin: 0 0 rem(15px) 0;
+	}
 }
 
 .header__left {
@@ -21,10 +25,9 @@
 .user__avatar {
   width: rem(60px);
   height: rem(60px);
-  border-radius: 50%;
   border: 1px solid #bebebe;
-  // @include border-radius 50%;
   overflow: hidden;
+  @include border-radius(50%);
   @include inlineblock(middle);
 }
 
@@ -42,6 +45,10 @@
 	color: $grey;
 	font-size: rem(18px);
 	@include fira();
+
+  	@include phones {
+		width: 160px;
+  	}
 }
 
 .header__right {
@@ -52,10 +59,19 @@
 	margin: rem(30px) 0 0 0;
 	position: relative;
 
+	@include phones {
+    	margin: rem(15px) 0 0 0;
+
+  	}
+
 	&:hover {
 		.contacts__link {
 			color: $red;
 			background: url('/img/decor/dotted-hover.png') 0 bottom repeat-x;
+
+			@include phones {
+				background: url('/img/contacts/phones-hover.png') 4px 4px no-repeat;
+			}
 		}
 		.contacts__dropdown {
 			visibility: visible;
@@ -64,10 +80,21 @@
 }
 
 .contacts__link {
+	display: block;
 	font-size: rem(18px);
 	color: $blue;
 	background: url('/img/decor/dotted.png') 0 bottom repeat-x;
-  @include fira(bold);
+  	@include fira(bold);
+
+  	@include phones {
+    	background: url('/img/contacts/phones.png') 4px 4px no-repeat;
+    	width: 40px;
+    	height: 40px;
+		text-indent: 100%;
+  		white-space: nowrap;
+  		overflow: hidden;
+
+  	}
 }
 
 .contacts__dropdown {
@@ -78,31 +105,42 @@
 	right: 0;
 	background: #fff;
 	border: 1px solid #dedede;
-	border-radius: 10px;
 	text-align: left;
 	z-index: 1;
+	@include border-radius(10px);
+
+	@include phones {
+		top: rem(60px);
+	}
 
 	&:before {
 		content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 58%;
-    width: 0;
-    height: 0;
-    border: 9px solid transparent;
-    border-bottom: rem(14px) solid #dedede;
-	}   
+		position: absolute;
+		height: 12px;
+		width: 12px;
+		background: #fff;
+	    border-top: 1px solid #dedede;
+    	border-left: 1px solid #dedede;
+   		bottom: 100%;
+   		left: 50%;
+    	transform: rotate(45deg);
+   		margin: -6px 25px;
 
-		&:after {
+   		@include phones {
+   			left: 70%;
+   		}
+	}
+
+
+
+	&:after {
 		content: "";
-		z-index: 1;
-    position: absolute;
-    bottom: 99%;
-    left: 58%;
-    width: 0;
-    height: 0;
-    border: 9px solid transparent;
-    border-bottom: rem(14px) solid #fff;
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 35px;
+		top: -35px;
 	}
 }
 
@@ -118,7 +156,7 @@
 .dropdown__link {
 	color: $grey;
 	font-size: rem(18px);
-  display: block;
+  	display: block;
 	padding: 0 rem(10px) 0 rem(48px);
 	@include fira(light);
 

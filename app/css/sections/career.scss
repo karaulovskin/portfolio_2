@@ -1,22 +1,33 @@
 .career {
 	@extend %clearfix;
+	padding: rem(9px) 0 0 0;
 }
 
 .career__left {
 	float: left;
+
+	@include phones {
+    	float: none;
+    	margin: 0 auto rem(20px);
+ 	}
 }
 
 .career__pic {
-  width: rem(220px);
-  height: rem(220px);
-  border-radius: rem(10px);
-  overflow: hidden;
-  margin: 0 auto;
+	width: rem(220px);
+	height: rem(220px);
+	overflow: hidden;
+	margin: 0 auto;
+	@include border-radius(10px);
 
-  @include laptop {
-    width: rem(150px);
-    height: rem(150px);
-  }
+	@include laptop {
+    	width: rem(140px);
+    	height: rem(140px);
+    }
+
+	@include phones {
+    	width: rem(220px);
+    	height: rem(220px);
+    }
 }
 
 .career__pic-img {
@@ -27,9 +38,15 @@
 	float: right;
 	width: rem(380px);
 
-  @include laptop {
-    width: rem(310px);
-  }
+	@include laptop {
+    	width: rem(270px);
+    }
+
+    @include phones {
+    	float: none;
+    	margin: 0 auto;
+    	width: rem(320px)
+    }
 }
 
 .career__item {
@@ -60,11 +77,11 @@
 	font-size: rem(20px);
 	padding: rem(14px) rem(20px) rem(14px) rem(20px);
 	background: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,.15);
-	border-radius: 10px;
 	position: relative;
 	text-align: left;
 	color: $lightgrey;
+	@include box-shadow(0 1px 3px rgba(#000, .2));
+	@include border-radius(10px);
 
 	&:before, &:after {
 		content: "";
@@ -73,6 +90,10 @@
 		background: #ddd;
 		position: absolute;
 		left: rem(-23px);
+
+	    @include phones {
+    		display: none; 
+  		}
 	}
 
 	&:before {
@@ -114,18 +135,17 @@
 	// margin: 0 0 rem(3px) 0;
 	@include fira();
 
-  @include laptop {
-    font-size: rem(18px); 
-  }
+	@include laptop {
+    	font-size: rem(18px); 
+	}
 
-  @include tablets {
-    font-size: rem(18px); 
-  }
+	@include tablets {
+    	font-size: rem(18px); 
+	}
 }
 
 .career__date {
 	font-size: rem(18px);
-	// margin: 0 0 rem(3px) 0;
 	@include fira();
 }
 
@@ -145,11 +165,15 @@
 		height: rem(10px);
 		background: $blue;
 		border: 5px solid $white;
-		border-radius: 50%;
 		position: absolute;
 		right: rem(-21px);
 		top: 50%;
 		margin: rem(-10px) 0 0 0;
 		z-index: 1;
+		@include border-radius(50%);
 	}
+
+		@include phones {
+    		display: none; 
+		}
 }
